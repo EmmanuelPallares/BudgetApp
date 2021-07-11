@@ -1,11 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import { AppProvider } from "./context/AppContext";
 import Budget from "./components/Budget";
-import Remaining from "./components/Remaining";
 import ExpenseTotal from "./components/ExpenseTotal";
 import ExpenseList from "./components/ExpenseList";
 import AddExpenseForm from "./components/AddExpenseForm";
-import { AppProvider } from "./context/AppContext";
+import RemainingBudget from "./components/Remaining";
 
 const App = () => {
   return (
@@ -17,14 +18,14 @@ const App = () => {
             <Budget />
           </div>
           <div className="col-sm">
-            <Remaining />
+            <RemainingBudget />
           </div>
           <div className="col-sm">
             <ExpenseTotal />
           </div>
         </div>
         <h3 className="mt-3">Expenses</h3>
-        <div className="row mt-3">
+        <div className="row ">
           <div className="col-sm">
             <ExpenseList />
           </div>
